@@ -14,14 +14,17 @@ The resulting file outputs two geojson files; (1) one for the tower locations an
 
 Issues
 -----
+- i should really change the input/out file variables to usuable command line arguments;
 - appID might not be unique.  no idea why this is;
 - service has values of CA, DC, DD, DM, DN, DR, DS, DT, DX, LD, TV, TX; currently these values are not decoded;
-- the call sign isn't being pulled cleanly out of the description.  it could use some work to get the clean call sign.  sometimes this is a 4 digit number, sometimes it is a 5 digit, sometimes it is a 4 + 2 digit w/ a '-' in between 
+- the call sign isn't being pulled cleanly out of the description.  it could use some work to get the clean call sign.  sometimes this is a 4 digit number, sometimes it is a 5 digit, sometimes it is a 4 + 2 digit w/ a '-' in between;
 - rather than reading and writing lines, it might be better to read the file in as a csv file or an array and grab data elements out as array elements.to do this w/ python, one would use the genfromtxt command, but i struggled with it.  
 
 Examples
 --------
-See the [Examples](examples) for some example output from this script.
+See the [Point Example](https://github.com/feomike/tv_2_geojson/blob/master/examples/tv_point_dt.geojson) for an example tower output from this script.
+
+See the [Contour Example](https://github.com/feomike/tv_2_geojson/blob/master/examples/tv_contour_dc.geojson) for an example contour output from this script.
 
 License
 -------
